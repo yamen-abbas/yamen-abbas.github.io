@@ -369,7 +369,7 @@ window.SITE = {
   /* ---------- Contact facts ---------- */
   facts: [
     { icon: "clock",     label: { en: "Response time", ar: "وقت الرد" }, value: { en: "< 24 hours", ar: "خلال 24 ساعة" } },
-    { icon: "map-pin",   label: { en: "Location", ar: "الموقع" },        value: { en: "Tartous, Syria · Remote", ar: "طرطوس، سوريا" } },
+    { icon: "map-pin",   label: { en: "Location", ar: "الموقع" },        value: { en: "Tartous, Syria", ar: "طرطوس، سوريا" } },
     { icon: "languages", label: { en: "Languages", ar: "اللغات" },       value: { en: "Arabic · English", ar: "العربية · الإنجليزية" } }
   ],
 
