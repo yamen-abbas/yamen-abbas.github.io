@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yamen Abbas — Backend Developer & Team Lead</title>
+  <meta name="description" content="Yamen Abbas: Senior Backend Developer and Team Lead. PHP, Laravel, MySQL, REST APIs and Linux server administration.">
+  <meta name="theme-color" content="#050913">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1430'/%3E%3Cpath d='M12 10l-6 6 6 6M20 10l6 6-6 6' fill='none' stroke='%237cb4ff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Orbitron:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav-bar">
+      <a class="brand" href="#home" data-nav="home">
+        <span class="brand-mark" data-icon="code"></span>
+        <span class="brand-text">
+          <strong data-i18n="name">Yamen Abbas</strong>
+          <small id="navRole">Backend Developer</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main">
+        <a href="#home" data-nav="home" data-i18n="navHome">Home</a>
+        <a href="#about" data-nav="about" data-i18n="navAbout">About</a>
+        <a href="#skills" data-nav="skills" data-i18n="navSkills">Skills</a>
+        <a href="#projects" data-nav="projects" data-i18n="navProjects">Projects</a>
+        <a href="#experience" data-nav="experience" data-i18n="navExperience">Experience</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-btn" id="langBtn" type="button" data-i18n-aria="langAria">
+          <span data-icon="globe"></span><span class="lang-label" data-i18n="langSwitch">العربية</span>
+        </button>
+        <a class="btn btn-accent btn-sm nav-cta" href="#contact" data-nav="contact">
+          <span data-i18n="getInTouch">Get In Touch</span><span data-icon="send"></span>
+        </a>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" data-i18n-aria="menu">
+          <span data-icon="menu"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#home" data-nav="home" data-i18n="navHome">Home</a>
+      <a href="#about" data-nav="about" data-i18n="navAbout">About</a>
+      <a href="#skills" data-nav="skills" data-i18n="navSkills">Skills</a>
+      <a href="#projects" data-nav="projects" data-i18n="navProjects">Projects</a>
+      <a href="#experience" data-nav="experience" data-i18n="navExperience">Experience</a>
+      <a href="#contact" data-nav="contact" data-i18n="navContact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO + ABOUT (pinned scroll stage) ===================== -->
+    <section class="stage-wrap" id="home">
+      <div class="stage">
+        <div class="horizon" aria-hidden="true"></div>
+        <div class="stage-inner" id="stageInner">
+
+          <div class="hero-copy" id="heroCopy">
+            <h1 class="hero-title">
+              <span data-i18n="hello">Hello, I Am</span>
+              <span class="hero-name" data-i18n="name">Yamen Abbas</span>
+            </h1>
+            <p class="role-line" aria-hidden="true"><span id="roleText">Backend Developer</span><span class="caret"></span></p>
+            <div class="role-chips" id="roleChips"></div>
+            <p class="hero-tagline" data-i18n="tagline"></p>
+            <div class="hero-actions">
+              <a class="btn btn-accent" href="#projects" data-nav="projects">
+                <span data-i18n="explore">Explore My Work</span><span data-icon="chevron-right" class="flip-rtl"></span>
+              </a>
+              <a class="btn btn-ghost" id="cvLinkHero" href="assets/Yamen_Abbas_CV.pdf" target="_blank" rel="noopener">
+                <span data-icon="file-text"></span><span data-i18n="myCv">MY CV</span>
+              </a>
+            </div>
+            <p class="scroll-hint mono"><span class="pulse-dot"></span><span data-i18n="scrollHint">Scroll to slide profile</span></p>
+          </div>
+
+          <div class="profile-card" id="profileCard">
+            <div class="card-tilt" id="cardTilt">
+              <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+              <div class="card-top">
+                <span class="online-pill mono"><span class="live-dot"></span><span data-i18n="online">ONLINE</span></span>
+                <span class="card-icon" data-icon="terminal"></span>
+              </div>
+              <div class="card-photo">
+                <img id="profilePhoto" src="assets/yamen-portrait.jpg" alt="" width="780" height="1040" decoding="async">
+                <span class="scan" aria-hidden="true"></span>
+              </div>
+              <div class="card-info">
+                <span class="card-role mono" id="cardRole">BACKEND DEVELOPER</span>
+                <div class="card-name-row">
+                  <strong class="card-name" data-i18n="name">Yamen Abbas</strong>
+                  <span class="card-check" data-icon="shield-check"></span>
+                  <span class="verified mono" data-i18n="verified">VERIFIED</span>
+                </div>
+                <div class="card-stack mono"><span data-icon="sparkles"></span><span id="cardStack">Laravel • PHP • MySQL</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-copy" id="aboutCopy">
+            <span class="anchor" id="about"></span>
+            <h2 class="about-title" data-i18n="aboutTitle"></h2>
+            <p class="about-body" data-i18n="aboutBody"></p>
+            <div class="about-cards" id="aboutCards"></div>
+            <div class="about-stats" id="aboutStats"></div>
+            <p class="about-hint mono" data-i18n="aboutHint"></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" data-reveal data-i18n="skillsTitle">Skills Network</h2>
+          <div class="legend mono" id="skillLegend" data-reveal style="--d:.1s"></div>
+        </div>
+        <div class="mesh" id="mesh">
+          <div class="mesh-tip" id="meshTip" role="status" aria-live="polite"></div>
+        </div>
+        <div class="skill-lists" id="skillLists"></div>
+        <div class="gauges panel" id="gauges" data-reveal>
+          <div class="gauges-head mono">
+            <span data-i18n="gaugesTitle">SKILL LEVELS & TELEMETRY</span>
+            <span class="ok"><span class="live-dot"></span><span data-i18n="gaugesOk">ALL SYSTEMS OPERATIONAL</span></span>
+          </div>
+          <div class="gauge-grid" id="gaugeGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" data-reveal data-i18n="projectsTitle">Featured Systems & Architecture</h2>
+          <span class="counter-pill mono" id="projCounter" data-reveal style="--d:.1s">PROJECT 01 / 07</span>
+        </div>
+
+        <div class="terminal panel" id="terminal" data-reveal="scale" tabindex="-1">
+          <div class="term-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <code class="term-cmd" id="termCmd" dir="ltr"></code>
+            <span class="term-icon" data-icon="shield-check"></span>
+          </div>
+          <div class="slides" id="slides" aria-live="polite"></div>
+          <div class="term-foot">
+            <button class="btn btn-ghost btn-sm" id="prevBtn" type="button"><span data-icon="chevron-left" class="flip-rtl"></span><span data-i18n="prev">PREV</span></button>
+            <div class="slide-dots" id="slideDots"></div>
+            <button class="btn btn-ghost btn-sm" id="nextBtn" type="button"><span data-i18n="next">NEXT</span><span data-icon="chevron-right" class="flip-rtl"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-head stacked">
+          <h2 class="section-title" data-reveal data-i18n="expTitle">Experience & Education</h2>
+          <p class="section-sub" data-reveal style="--d:.08s" data-i18n="expSub"></p>
+        </div>
+        <div class="timeline" id="timeline">
+          <div class="timeline-line" aria-hidden="true"><span id="timelineFill"></span></div>
+          <div id="timelineItems"></div>
+        </div>
+        <h3 class="edu-title" data-reveal data-i18n="education">Education</h3>
+        <div class="edu-grid" id="eduGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="hub-badge mono" data-reveal><span class="live-dot"></span><span data-i18n="hubBadge">COMMUNICATION HUB · GLOBAL NETWORK</span></div>
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <span class="avail-pill mono" data-reveal data-i18n="available">ONLINE & AVAILABLE</span>
+            <h2 class="contact-title" data-reveal style="--d:.06s" data-i18n="contactTitle"></h2>
+            <p class="contact-body" data-reveal style="--d:.12s" data-i18n="contactBody"></p>
+            <div class="facts" id="facts"></div>
+            <div class="contact-actions" data-reveal style="--d:.3s">
+              <a class="btn btn-solid" id="mailBtn" href="mailto:yamen.abbas.422@gmail.com"><span data-icon="send"></span><span data-i18n="sendEmail">Send Email</span></a>
+              <a class="btn btn-ghost" id="cvLinkContact" href="assets/Yamen_Abbas_CV.pdf" target="_blank" rel="noopener"><span data-icon="file-text"></span><span data-i18n="myCv">MY CV</span></a>
+              <button class="btn btn-ghost" id="copyBtn" type="button"><span data-icon="copy"></span><span data-i18n="copyAddress">Copy Address</span></button>
+            </div>
+          </div>
+          <div class="channels">
+            <div class="channels-head mono" data-reveal>
+              <span><span data-icon="shield-check"></span><span data-i18n="channels">VERIFIED CHANNELS</span></span>
+              <span class="ok" data-i18n="channelsOn">4 CHANNELS ONLINE</span>
+            </div>
+            <div class="channel-grid" id="channelGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong data-i18n="name">Yamen Abbas</strong>
+        <span class="mono" data-i18n="footerRoles"></span>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#home" data-nav="home" data-i18n="navHome">Home</a>
+        <a href="#about" data-nav="about" data-i18n="navAbout">About</a>
+        <a href="#skills" data-nav="skills" data-i18n="navSkills">Skills</a>
+        <a href="#projects" data-nav="projects" data-i18n="navProjects">Projects</a>
+        <a href="#contact" data-nav="contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <button class="btn btn-ghost btn-sm" id="topBtn" type="button"><span data-i18n="backToTop">Back to Top</span><span data-icon="arrow-up"></span></button>
+    </div>
+    <p class="copyright container mono">© <span id="year"></span> <span data-i18n="name">Yamen Abbas</span>. <span data-i18n="rights">All rights reserved.</span></p>
+  </footer>
+
+  <!-- ===================== ASSISTANT ===================== -->
+  <button class="chat-launcher" id="chatLauncher" type="button" aria-expanded="false" aria-controls="chatPanel" data-i18n-aria="chatOpen">
+    <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="chat-badge" id="chatBadge" aria-hidden="true">1</span>
+  </button>
+
+  <section class="chat-panel" id="chatPanel" role="dialog" aria-modal="false" aria-labelledby="chatTitle" hidden>
+    <header class="chat-head">
+      <span class="chat-avatar" data-icon="sparkles"></span>
+      <div class="chat-head-text">
+        <strong id="chatTitle" data-i18n="chatTitle">Yamen's Assistant</strong>
+        <small id="chatStatus" class="chat-status"><span class="live-dot"></span><span id="chatStatusText" data-i18n="chatOnline">Online & ready to help</span></small>
+      </div>
+      <button class="icon-btn" id="chatVoice" type="button" aria-pressed="false" data-i18n-aria="chatVoice"><span data-icon="volume-x"></span></button>
+      <button class="icon-btn" id="chatClear" type="button" data-i18n-aria="chatClear"><span data-icon="trash"></span></button>
+      <button class="icon-btn" id="chatClose" type="button" data-i18n-aria="chatClose"><span data-icon="x"></span></button>
+    </header>
+    <div class="chat-body" id="chatBody" aria-live="polite"></div>
+    <div class="chat-suggest" id="chatSuggest"></div>
+    <form class="chat-form" id="chatForm" autocomplete="off">
+      <label class="sr-only" for="chatInput" data-i18n="chatLabel">Your question</label>
+      <input id="chatInput" type="text" maxlength="300" data-i18n-ph="chatPlaceholder" placeholder="Type your question…">
+      <button class="send-btn" type="submit" data-i18n-aria="chatSend"><span data-icon="send" class="flip-rtl"></span></button>
+    </form>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
